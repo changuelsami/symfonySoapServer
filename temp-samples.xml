@@ -1,0 +1,20 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:ns1="http://127.0.0.1:8000/soap/check" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <ns1:check>
+            <name xsi:type="xsd:string">Sami</name>
+        </ns1:check>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Body>
+        <check xmlns="http://127.0.0.1:8000/soap/check">
+            <name>hello</name>
+        </check>
+    </Body>
+</Envelope>
