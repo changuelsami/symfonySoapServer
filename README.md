@@ -10,16 +10,24 @@ How to use ?
 ===================
 
 Clone this repo : 
+```
 $ git clone https://github.com/changuelsami/symfonySoapServer.git
+```
 
 Move to the new created folder :
+```
 $ cd symfonySoapServer
+```
 
 Run composer install : 
+```
 $ composer install
+```
 
 Run server : 
+```
 $ php bin/console server:run
+```
 
 To see the WSDL file go to this URL : 
 http://127.0.0.1:8000/soap/hello?wsdl
