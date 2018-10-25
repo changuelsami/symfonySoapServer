@@ -34,3 +34,20 @@ http://127.0.0.1:8000/soap/hello?wsdl
 
 You can use Wizdler to browse the WSDL and test it : 
 https://chrome.google.com/webstore/detail/wizdler/oebpmncolmhiapingjaagmapififiakb
+
+This is the client call : 
+```
+$client = new SoapClient(
+    'http://127.0.0.1:8001/soap/hello?wsdl',  
+    ['cache_wsdl' => 0]  /* very important */
+);
+
+try {
+    $response = $client->hello("John DOE");
+    echo "\n Response : $response \n";
+
+} catch (SoapFault $fault) {
+    echo "Error: " . $fault->faultcode . ": " . $fault->getMessage() . "\n";
+    var_dump($fault);
+}
+```
