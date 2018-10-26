@@ -33,8 +33,3 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
-    
-    ##### NEW SERVICES ...
-    hello_service:
-        class: AppBundle\Service\HelloService
-        public: true

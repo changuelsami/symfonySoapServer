@@ -30,10 +30,11 @@ class SoapController extends Controller
      */
     public function hello()
     {
+        $sevice = new HelloController();
         if (isset($_GET['wsdl']))
-            return $this->handleWSDL($this->generateUrl('soap_hello'), 'hello_service');
+            return $this->handleWSDL($this->generateUrl('soap_hello'), $sevice);
         else
-            return $this->handleSOAP($this->generateUrl('soap_hello'), 'hello_service');
+            return $this->handleSOAP($this->generateUrl('soap_hello'), $sevice);
     }
 
 
@@ -45,7 +46,7 @@ class SoapController extends Controller
         $uri = $this->serverUrl . $uri;
         // Soap auto discover
         $autodiscover = new Soap\AutoDiscover();
-        $autodiscover->setClass($this->get($class));
+        $autodiscover->setClass($class);
         $autodiscover->setUri($uri);
 
         // Response
@@ -70,7 +71,7 @@ class SoapController extends Controller
             array('location' => $uri,
                 'uri' => $uri,
             ));
-        $soap->setClass($this->get($class));
+        $soap->setClass($class);
 
         // Response
         $response = new Response();
