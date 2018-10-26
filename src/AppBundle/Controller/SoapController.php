@@ -61,7 +61,7 @@ class SoapController extends Controller
 
         // Response
         $response = new Response();
-        $response->headers->set('Content-Type', 'text/xml; charset=ISO-8859-1'); // WSDL is a XML content
+        $response->headers->set('Content-Type', 'text/xml; charset=UTF-8'); // WSDL is a XML content
         
         // Start Output Buffering, nothing will be displayed ...
         ob_start();
