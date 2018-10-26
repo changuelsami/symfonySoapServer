@@ -1,5 +1,7 @@
 <?php
 /**
+ * Simple SOAP Server - v1
+ * 
  * Create a simple HelloWorld SOAP server. The main function (hello) is defined in HelloController 
  * which is a basic Controller. To publish a method of HelloController we've created this controller 
  * (SoapController) where we have one + two methods : 
